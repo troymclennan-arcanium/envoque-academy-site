@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Envoque Sales &amp; Performance Academy</title>
+<meta name="description" content="Voice-first sales coaching for property professionals. The Envoque Sales &amp; Performance Academy, powered by Reggie — AI sales coach.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23131820'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23c9a227' font-family='Georgia,serif' font-weight='700'%3EE%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#131820; --ink-soft:#1c232e; --paper:#faf9f7; --card:#ffffff;
+    --gold:#c9a227; --gold-soft:#e5d9a8; --muted:#5b6472; --line:#e6e2da;
+    --radius:14px; --maxw:1080px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;line-height:1.15;font-weight:600}
+  a{color:inherit}
+
+  /* nav */
+  nav{position:absolute;top:0;left:0;right:0;z-index:10}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:26px}
+  .wordmark{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+  .wordmark .mark{font-family:'Fraunces',serif;font-weight:700;font-size:1.25rem;color:#fff;letter-spacing:.01em}
+  .wordmark .div{color:rgba(255,255,255,.35)}
+  .wordmark .div em{font-style:normal;font-size:.72rem;text-transform:uppercase;letter-spacing:.18em;color:var(--gold-soft)}
+  .navlink{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.3);padding:9px 18px;border-radius:999px;transition:.2s}
+  .navlink:hover{background:rgba(255,255,255,.12)}
+
+  /* hero */
+  header{background:var(--ink);color:#fff;padding:120px 0 96px;position:relative;overflow:hidden}
+  header::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(ellipse 60% 50% at 78% 22%, rgba(201,162,39,.16), transparent 65%),
+    radial-gradient(ellipse 50% 60% at 8% 90%, rgba(255,255,255,.05), transparent 60%)}
+  header .wrap{position:relative}
+  .kicker{display:inline-block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-soft);border:1px solid rgba(229,217,168,.35);padding:7px 14px;border-radius:999px;margin-bottom:28px}
+  header h1{font-size:clamp(2.4rem,5.2vw,3.9rem);font-weight:600;max-width:14em}
+  header h1 em{font-style:italic;color:var(--gold-soft)}
+  .lede{max-width:38em;color:rgba(255,255,255,.78);font-size:1.06rem;margin:24px 0 40px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;text-decoration:none;padding:14px 28px;border-radius:10px;font-weight:600;font-size:.95rem;transition:.2s}
+  .btn-gold{background:var(--gold);color:#181207}
+  .btn-gold:hover{background:#d8b233}
+  .btn-ghost{border:1px solid rgba(255,255,255,.35);color:#fff}
+  .btn-ghost:hover{background:rgba(255,255,255,.1)}
+
+  /* sections */
+  section{padding:88px 0}
+  .eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px}
+  h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:18px}
+  .sub{color:var(--muted);max-width:36em;margin-bottom:48px}
+
+  /* environments */
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:540px){.grid{grid-template-columns:1fr}}
+  .env{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;display:flex;flex-direction:column;gap:12px;transition:.2s}
+  .env:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(19,24,32,.08)}
+  .env .num{font-family:'Fraunces',serif;font-size:.95rem;color:var(--gold);letter-spacing:.08em}
+  .env h3{font-size:1.12rem}
+  .env p{font-size:.88rem;color:var(--muted)}
+  .env .mode{margin-top:auto;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#9aa3af}
+
+  /* loop strip */
+  .loop{background:var(--ink-soft);color:#fff;border-radius:var(--radius);padding:44px 40px;display:flex;align-items:center;gap:36px;flex-wrap:wrap}
+  .loop .serif{font-size:1.35rem;flex:0 0 18em}
+  .loop ol{list-style:none;display:flex;gap:0;flex:1;min-width:280px;counter-reset:step;flex-wrap:wrap}
+  .loop li{flex:1;min-width:130px;position:relative;padding:0 22px 0 0;counter-increment:step;font-size:.85rem;color:rgba(255,255,255,.75)}
+  .loop li::before{content:counter(step,decimal-leading-zero);display:block;font-family:'Fraunces',serif;color:var(--gold-soft);font-size:1.05rem;margin-bottom:6px}
+  .loop li:not(:last-child)::after{content:"→";position:absolute;right:-4px;top:0;color:rgba(255,255,255,.3);font-size:1rem}
+
+  /* roles */
+  .roles{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media(max-width:760px){.roles{grid-template-columns:1fr}}
+  .role{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+  .role h3{font-size:1.05rem;margin-bottom:8px}
+  .role p{font-size:.88rem;color:var(--muted)}
+
+  /* principles */
+  .dark{background:var(--ink);color:#fff}
+  .dark .sub{color:rgba(255,255,255,.72)}
+  .plist{display:grid;grid-template-columns:repeat(2,1fr);gap:22px 44px;max-width:860px}
+  @media(max-width:700px){.plist{grid-template-columns:1fr}}
+  .plist div{border-top:1px solid rgba(255,255,255,.16);padding-top:16px}
+  .plist h3{font-size:1rem;margin-bottom:6px;color:var(--gold-soft)}
+  .plist p{font-size:.88rem;color:rgba(255,255,255,.72)}
+
+  /* access */
+  .access{text-align:center;max-width:640px;margin:0 auto}
+  .access .badge{display:inline-block;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:36px 34px}
+  .access p{color:var(--muted);font-size:.95rem}
+
+  footer{background:var(--ink);color:rgba(255,255,255,.6);padding:40px 0;font-size:.82rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+  footer .fmark{font-family:'Fraunces',serif;color:#fff;font-size:1rem}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="wordmark" href="/">
+      <span class="mark">Envoque Academy</span>
+      <span class="div"><em>&nbsp;·&nbsp;</em></span>
+    </a>
+    <a class="navlink" href="#access">Staff Access</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <span class="kicker">Sales &amp; Performance Academy</span>
+    <h1>Sales mastery, <em>coached by voice.</em></h1>
+    <p class="lede">A voice-first coaching platform for property professionals. Practice live client conversations, build skills against a proven methodology, and measure real performance growth — with Reggie, Envoque's AI sales coach, in your corner.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="#environments">Explore the Academy</a>
+      <a class="btn btn-ghost" href="#access">Staff sign-in</a>
+    </div>
+  </div>
+</header>
+
+<section id="environments">
+  <div class="wrap">
+    <p class="eyebrow">Four environments, one system</p>
+    <h2>Training that works like real estate does.</h2>
+    <p class="sub">Every environment plays a distinct role in development. Together they close the loop: practice reveals a gap, targeted lessons fix it, coaching debriefs it, and measurement proves it.</p>
+    <div class="grid">
+      <div class="env">
+        <span class="num">01</span>
+        <h3>Roleplay Arena</h3>
+        <p>Live simulated conversations with realistic client personas — dynamic objections, interruptions and escalating difficulty.</p>
+        <span class="mode">Voice</span>
+      </div>
+      <div class="env">
+        <span class="num">02</span>
+        <h3>Skills Academy</h3>
+        <p>Structured pathways built on a proven sales codex — concepts, exercises and competency checkpoints.</p>
+        <span class="mode">Interactive learning</span>
+      </div>
+      <div class="env">
+        <span class="num">03</span>
+        <h3>Reggie Coach</h3>
+        <p>Personalised one-to-one coaching — debriefs, practice planning and honest feedback on your sessions.</p>
+        <span class="mode">Voice + chat</span>
+      </div>
+      <div class="env">
+        <span class="num">04</span>
+        <h3>Performance Lab</h3>
+        <p>Capability profiles, competency trends, assessments and milestones — development you can actually see.</p>
+        <span class="mode">Insights &amp; measurement</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="loop">
+      <div class="serif">The loop that turns practice into performance.</div>
+      <ol>
+        <li>Roleplay reveals a weakness</li>
+        <li>The Academy recommends a lesson</li>
+        <li>Reggie debriefs and coaches it</li>
+        <li>Measurement proves the improvement</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="teams" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Built for the whole team</p>
+    <h2>Development at every level.</h2>
+    <p class="sub">Access is role-based. Everyone sees exactly what they need — and nothing they shouldn't.</p>
+    <div class="roles">
+      <div class="role">
+        <h3>Agents &amp; Cadets</h3>
+        <p>Own your training — practice sessions, feedback and progress, all in your hands.</p>
+      </div>
+      <div class="role">
+        <h3>Team Leaders</h3>
+        <p>Coaching plans and agreed assessments for your team's development.</p>
+      </div>
+      <div class="role">
+        <h3>Directors &amp; Academy Lead</h3>
+        <p>Organisation-level capability, training effectiveness and program oversight.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--gold-soft)">Professional development, not surveillance</p>
+    <h2>Coaching you can trust.</h2>
+    <p class="sub">The Academy is built on explicit principles — and they gate the build, not just the marketing.</p>
+    <div class="plist">
+      <div>
+        <h3>Voice-first, not voice-only</h3>
+        <p>Practice real conversations. Every environment honours its primary experience.</p>
+      </div>
+      <div>
+        <h3>Consent before recording</h3>
+        <p>Transparent notices and real choices before any recording or assessment, with defined retention limits.</p>
+      </div>
+      <div>
+        <h3>Humans in the loop</h3>
+        <p>Any assessment that influences someone's employment is reviewed by a person.</p>
+      </div>
+      <div>
+        <h3>Privacy by design</h3>
+        <p>Authenticated access, least-privilege permissions and transparency about what's collected — and who can see it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="access">
+  <div class="wrap">
+    <div class="access">
+      <p class="eyebrow">Staff access</p>
+      <div class="badge">
+        <h2 style="font-size:1.5rem">The Academy is a private platform.</h2>
+        <p style="margin-top:12px">Envoque Sales &amp; Performance Academy is available to Envoque Property staff. Sign-in is issued by your Academy Lead.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="fmark">Envoque Sales &amp; Performance Academy</span>
+    <span>Envoque Property · 5/571 Pacific Highway, Belmont NSW 2280</span>
+  </div>
+</footer>
+
+</body>
+</html>
